@@ -1,0 +1,14 @@
+  php:
+    build: .
+    ports:
+    - "9000:9000"
+    - "6379:6379" 
+    - "443:443"
+ 
+    environment:
+      DEBUG: 'true'
+
+    volumes:
+      - ./httpd:/etc/httpd/
+      - ../producteev4:/var/www/producteev4/
+    tty: true
